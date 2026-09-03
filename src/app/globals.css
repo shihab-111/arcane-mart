@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-ink; }
+
+@layer components {
+  .wrap { @apply w-[92vw] max-w-[1200px] mx-auto; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-bold transition; }
+  .btn-sun { @apply btn bg-sun text-ink hover:brightness-105; }
+  .btn-leaf { @apply btn bg-leaf-deep text-white hover:bg-leaf; }
+  .btn-ghost { @apply btn border border-line text-ink hover:bg-leaf-soft; }
+  .field { @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/30; }
+  .label { @apply block text-sm font-semibold mb-1; }
+  .card { @apply rounded-xl border border-line bg-white overflow-hidden; }
+  .heading { @apply relative pl-3.5 text-xl md:text-2xl font-extrabold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[5px] before:rounded before:bg-leaf; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
